@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles/DashBoardTemplate.css">
+    <script async defer src="Script/Transactions.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="page-container">
+    <div class="sidebar d-flex flex-column justify-content-between">
+        <div>
+            <div>
+            <img src="https://corp.ezetap.com/uploads/settings/logo2.png" class="logo-image">
+            </div>
+            <hr class="hr-nav">
+            <div>
+            <a class="anchor-element" href="/">Transactions</a>
+            </div>
+            <div>
+                <a class="anchor-element" href="/bulkPosting">Bulk Posting</a>
+            </div>
+
+        </div>
+        <div>
+            <div class="logout-button">
+                <a href="/logout"><button type="button" class="btn button">LogOut</button></a>
+            </div>
+        </div>
+    </div>
+    <div class="page-body">
+        <div>
+            <nav class="page-navbar">
+                <form class="d-flex form-elements">
+                    <input id="searchInput" class="form-control me-2" placeholder="Search" type="search">
+                    <button class="btn button" type="button" style="background-color:#5B6473;" onclick="search(0)">Search</button>
+                </form>
+            </nav>
+        </div>
+        <div class="content-bish">
+            <div class="table-container">
+                <div class="content">
+                    <table class="table">
+                        <thead class="head-table">
+                        <tr>
+                            <th scope="col">TXNID</th>
+                            <th scope="col">STATUS</th>
+                            <th scope="col">ORG</th>
+                            <th scope="col">POSTING COUNT</th>
+                            <th scope="col">LAST RETRY</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-data">
+                    <table class="table">
+                        <tbody class="class-table" id="tableBody">
+                        </tbody>
+                    </table>
+                </div>
+                <hr class="hr-element">
+                <div class="boxes-container">
+                    <div  onclick="previousPage()" id="previousPage"><button class="page-button" id="pageButt" >Previous</button></div>
+                    <div class="page-para-cont" ><p class="page-para" id="currentPage"></p></div>
+                    <div onclick="nextPage()" id="nextPage"><button class="page-button">Next</button></div>
+                </div>
+                <div class="d-flex flex-row" style="padding:5px;">
+<!--                    <div style="margin:5px">-->
+<!--                        <form>-->
+<!--                            <label for="itemsRange" >Items per Page</label>-->
+<!--                            <input type="number" min="10" max="30" id="itemsRange" placeholder="10">-->
+<!--                            <button class="btn button">apply</button>-->
+<!--                        </form>-->
+<!--                    </div>-->
+                    <div style="margin:5px;">
+                        <form>
+                            <label for="pageNumber">Page Number</label>
+                            <input type="number" min="0" max="var" id="pageNumber">
+                            <button class="btn button" type="button" onclick="setPageNumber()">Open Page</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="filter-card">
+                <h1 class="filter-heading">Filters</h1>
+                <hr class="hr-nav1">
+
+                <div class="filterData">
+                    <form style="margin:3px;" id="filterForm" action="">
+                        <select class="select-items" id="orgCode" name="orgCode" size="10" multiple>
+                        </select>
+
+                        <div class="label-div">
+                            <label class="label" for="startDate" >Start Date:</label>
+                            <input type="date"  id="startDate" name="startDate">
+                        </div>
+                        <br>
+                        <div class="label-div">
+                            <label class="label" for="endDate">End Date:</label>
+                            <input type="date"  id="endDate" name="endDate">
+                        </div>
+                        <button style="margin-top:10px;" class="btn button" id="btnFilter" type="button" onclick="filterTransaction(0)">Filter</button>
+                    </form>
+                </div>
+                <hr class="hr-nav">
+
+                <div id="downloadWithoutSearch" class="download-btn-container">
+                    <form >
+                        <input type="hidden" name="searchVar" id="searchForDownload">
+                        <input type="hidden" name="orgCodes1" id="orgCodesForDownloads">
+                        <input type="hidden" name="startDate" id="startDateForDownloads">
+                        <input type="hidden" name="endDate" id="endDateForDownload">
+                        <button  class="btn button"  type="button" onclick="downloadCSV()">Download</button>
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

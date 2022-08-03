@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles/DashBoardTemplate.css">
+    <script async defer src="Script/Posting.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="page-container">
+    <div class="sidebar d-flex flex-column justify-content-between">
+        <div>
+            <div>
+                <img src="https://corp.ezetap.com/uploads/settings/logo2.png" class="logo-image">
+            </div>
+            <hr class="hr-nav">
+            <div>
+                <a class="anchor-element" href="/">Dash Board</a>
+            </div>
+
+        </div>
+        <div>
+            <div class="logout-button">
+                <a href="/logout"><button type="button" class="btn button">LogOut</button></a>
+            </div>
+        </div>
+    </div>
+    <div class="page-body">
+        <div>
+            <nav class="page-navbar">
+                <h1>Bulk Posting</h1>
+            </nav>
+        </div>
+        <div style="text-align:center;">
+            <p class="posting-message" style="visibility:hidden;" id="repostingMessage"></p>
+        </div>
+        <div >
+            <div class="posting-container">
+
+                <div class="posting-form-container" style="margin:10px">
+                    <h1>Upload File</h1>
+                    <form>
+                        <label>Choose File</label>
+                        <input id="uploadedFile" type="file" accept=".csv">
+                        <button type="button" id="uploadFileButton" class="btn button">Upload</button>
+                    </form>
+                </div>
+                <div  class="posting-form-container" style="margin:10px">
+                    <h1>Single Posting</h1>
+                    <form>
+                        <label>Enter Transaction ID</label>
+                        <input style="width:100%;" id="singleTxnText" type="text" name="singleTxnText">
+                        <button class="btn button" id="submitButton"  type="button">Submit</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.2/papaparse.min.js"></script>
+</body>
+</html>

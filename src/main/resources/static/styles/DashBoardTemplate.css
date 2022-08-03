@@ -1,0 +1,262 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+.page-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    padding: 25px;
+     background-color: #f2f4f7;
+
+    font-family:"Roboto";
+
+}
+
+.page-navbar {
+
+    font-family: "Roboto";
+    font-size: 20px;
+    color: white;
+    height:8vh;
+    flex-shrink: 1;
+    flex-grow: 1;
+    border-top-right-radius: 15px;
+    margin-left:5px;
+    padding:10px;
+    background-color: #000000;
+        background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+
+
+}
+
+.page-body {
+    flex-grow: 5;
+    height:96vh;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.sidebar {
+    max-width: 16vw;
+        min-width: 12vw;
+        padding: 25px;
+        height:96vh;
+        background-color: #000000;
+        background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+        font-family: "Roboto";
+        font-size: 20px;
+        color: grey;
+        flex-grow: 1;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        margin-right:5px;
+}
+
+.content {
+    border-radius: 10px;
+    border-width: 2px;
+
+}
+
+.table {
+    table-layout: fixed;
+}
+
+.table-data {
+    height: 66vh;
+    overflow: auto;
+}
+
+.form-elements {
+    float: right;
+    margin-right: 8px;
+    margin: 3px;
+}
+
+.table-container {
+    border-width:2px;
+    border-style:solid;
+    border-color:#b8b7b6;
+    margin-top: 10px;
+    background-color:white;
+    margin-left:5px;
+    text-align:center;
+}
+
+.head-table {
+    color: white;
+    background-color: #ff4e00;
+        background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+}
+.boxes-container {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   border: 2px solid goldenrod;
+   margin-top:15px;
+   margin-left:5px;
+   margin-right:5px;
+   margin-bottom:5px;
+   padding:5px;
+   border-radius:5px;
+
+ }
+ .page-para{
+    border-radius:25px;
+    padding-left:8px;
+    padding-right:8px;
+    padding-top:3px;
+    padding-bottom:3px;
+
+    font-weight:bold;
+
+
+ }
+ .page-button{
+    color:black;
+    background-color: #ff4e00;
+        background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+    width:100px;
+    height:30px;
+    border-color:transparent;
+    border-radius:25px;
+ }
+ .page-para-cont{
+ width:25px;
+ height:30px;
+ }
+
+
+
+
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: grey;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:active {
+  color: grey;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.anchor-element{
+    display:block;
+    margin-left:5px;
+    margin-right:5px;
+    margin-top:8px;
+    margin-bottom:2px;
+}
+
+.content-bish {
+    display: flex;
+    flex-direction: row;
+}
+.filter-card {
+    min-width: 16vw;
+    margin-left: 10px;
+    margin-top:10px;
+    text-align:center;
+    height:87vh;
+    padding:5px;
+    font-size:15px;
+    color:white;
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+    border-bottom-right-radius:15px;
+}
+
+.button {
+    color:white;
+    margin: 5px;
+    min-width: 7vw;
+    max-width: 8vw;
+    min-height: 3vh;
+    max-height: 10vh;
+    overflow: auto;
+    background-color: #ff4e00;
+    background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+    font-weight:bold;
+
+}
+.filterData{
+    padding:10px;
+    border-radius:15px;
+
+}
+.label{
+color:white;
+font-weight:bold;
+}
+.label-div{
+padding:5px;
+margin-top:10px;
+}
+.filter-heading{
+color-white;
+font-size:40px;
+font-weight:bold;
+padding:5px;
+}
+.select-items{
+overflow:auto;
+width:14vw;
+border-radius:10px;
+padding:5px;
+}
+.hr-element{
+  border: 3px solid #1f1401;
+}
+
+.download-btn-container{
+align-items:center;
+}
+.hr-nav{
+    border: 2px solid white;
+}
+.hr-nav1{
+    border: 1px solid white;
+}
+.page-button-dead{
+    color:white;
+        background-color: #dedede;
+
+        width:100px;
+        height:30px;
+        border-color:transparent;
+        border-radius:25px;
+
+}
+.posting-form-container{
+    border-style:solid;
+    border-width:2px;
+    border-color:black;
+    padding:15px;
+    border-radius:25px;
+    margin:20px;
+}
+.posting-message{
+    font-size:35px;
+    color:black;
+}
+
+
+
